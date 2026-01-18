@@ -36,9 +36,9 @@ const SuperAdmin = () => {
   const fetchUsers = async () => {
     try {
       const res = await axios.get(
-        `${BASEURL}/auth/api/v1/dark-web-monitoring-users/super-admin/users?userId=${userId}`
+        `${BASEURL}/auth/api/v1/dark-web-monitoring-users/super-admin/dashboard`
       );
-      setUsers(res.data.data);
+      setUsers(res.data.users);
     } catch (err) {
       console.error("Users API Error:", err);
     }
